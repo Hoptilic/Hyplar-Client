@@ -37,6 +37,25 @@ function OfflineOrOnline() {
     }
 }
 
+
+const { Client, Authenticator } = require('minecraft-launcher-core');
+const launcher = new Client();
+
+let opts = {
+    clientPackage: null,
+    authorization: Authenticator.getAuth("Hoptilic"),
+    root: "./minecraft",
+    version: {
+        number: "1.8.9",
+        type: "release"
+    },
+    memory: {
+        max: "6G",
+        min: "4G"
+    }
+}
+
+
 let memMB = document.getElementById("settings-memory").value;
 if (memMB < 1024) memMB = 1024;
 
@@ -69,6 +88,10 @@ function setLaunchState(state) {
 		launchText.innerHTML = 'Banned';
 		launchSubText.innerHTML = reason;
 		launchButton.src = 'images/launch/no_auth.png';
+	} else if (state === 'launched') {
+		launchText.innerHTML = 'Launched';
+		launchSubText.innerHTML = 'Enjoy your gameplay!';
+		launchButton.src = 'images/launch/ready.png';
 	} else {
 		launchText.innerHTML = 'Error';
 		launchSubText.innerHTML = 'Try relaunching';
@@ -86,10 +109,6 @@ function isRunning(pid) {
 		return false;
 	}
 }
-
-// launchButton.addEventListener('click', launchClient);
-// launchText.addEventListener('click', launchClient);
-// launchSubText.addEventListener('click', launchClient);
 
 
 let heap = 2048;
@@ -140,6 +159,25 @@ request.post({
 	}
 	
 });
+
+function launchClient() {
+	if ("yes" === "yes"){
+		setLaunchState('connecting');
+		setTimeout(function(){
+			setLaunchState("authenticating");
+			setTimeout(function(){
+				setLaunchState('launching');
+				setTimeout(function(){
+					setLaunchState('launched');
+				}, 5000);
+			}, 5000);
+		}, 5000);
+		launcher.launch(opts);
+	}
+}
+
+launchButton.addEventListener('click', launchClient);
+
 
 // document.querySelector('.blog-read-button').addEventListener('click', function() {
 // 	shell.openExternal('https://foldclient.com/news/latest');
