@@ -3,6 +3,8 @@ const { shell } = require('electron')
 const request = require('request');
 const log = require('electron-log');
 
+
+
 // EXIT BUTTON //
 document.querySelector('.close-button').addEventListener('click', function() {
   app.getCurrentWindow().close();

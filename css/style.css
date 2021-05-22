@@ -28,7 +28,7 @@ body {
 
 .account-page {
     visibility: hidden;
-  }
+}
 
 header {
     height: 8%;
@@ -238,9 +238,9 @@ header {
     font-weight: bolder;
     font-variant: small-caps;
     text-transform: uppercase;
-  }
+}
 
-  #account-password-label {
+#account-password-label{
     position: absolute;
     left: 270px;
     text-align: center;
@@ -254,7 +254,52 @@ header {
     font-weight: bolder;
     font-variant: small-caps;
     text-transform: uppercase;
-  }
+}
+
+#account-offline-label{
+    position: absolute;
+    left: 300px;
+    text-align: center;
+    width: 200px;
+    top: 480px;
+    font-size: 20px;
+    z-index: 100;
+    color: white;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    font-weight: bolder;
+    font-variant: small-caps;
+    text-transform: uppercase;
+}
+
+#checkbox-inp{
+    width: 25px;
+    height: 25px;
+    left: 490px;
+    top: 495px;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.offline-check {
+    width: 25px;
+    height: 25px;
+    left: 490px;
+    top: 495px;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+    background-color: white;
+}
 
 .horizontal-line{
     left: 0px;

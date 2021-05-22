@@ -27,31 +27,15 @@ let vList = [];
 let tvl = false;
 let mcIsOn = false;
 
-// let opts = {
-//     clientPackage: null,
-//     // For production launchers, I recommend not passing 
-//     // the getAuth function through the authorization field and instead
-//     // handling authentication outside before you initialize
-//     // MCLC so you can handle auth based errors and validation!
-//     authorization: Authenticator.getAuth("undefined"),
-//     root: "./.lite_launcher",
-//     version: {
-//         number: "1.16.5",
-//         type: "release"
-//     },
-//     memory: {
-//         max: "6G",
-//         min: "4G"
-//     }
-
-//     // overrides: {
-//     //     meta: "https://launchermeta.mojang.com", // List of versions.
-//     //     resource: "https://resources.download.minecraft.net", // Minecraft resources.
-//     //     mavenForge: "http://files.minecraftforge.net/maven/", // Forge resources.
-//     //     defaultRepoForge: "https://libraries.minecraft.net/", // for Forge only, you need to redefine the library url in the version json.
-//     //     fallbackMaven: "https://search.maven.org/remotecontent?filepath="
-//     // }
-// }
+function OfflineOrOnline() {
+    if ( isCracked == true ) {
+        isCracked = false;
+        document.getElementById('checkbox-inp').classList.add('offline-check');
+    } else {
+        isCracked = true;
+        document.getElementById('checkbox-inp').classList.remove('offline-check');
+    }
+}
 
 let memMB = document.getElementById("settings-memory").value;
 if (memMB < 1024) memMB = 1024;
