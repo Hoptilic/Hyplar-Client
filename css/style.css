@@ -26,6 +26,10 @@ body {
   visibility: hidden;
 }
 
+.account-page {
+    visibility: hidden;
+  }
+
 header {
     height: 8%;
     width: 100%;
@@ -209,6 +213,49 @@ header {
     cursor: pointer;
 }
 
+.account-boundingbox {
+    left: calc(50% - 300px);
+    top: 233px;
+    position: absolute;
+    width: 600px;
+    height: 296px;
+    z-index: 16;
+    background-color: #242323;
+    border-radius: 10px;
+}
+
+#account-username-label {
+    position: absolute;
+    left: 270px;
+    text-align: center;
+    width: 200px;
+    top: 330px;
+    font-size: 14px;
+    z-index: 100;
+    color: white;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    font-weight: bolder;
+    font-variant: small-caps;
+    text-transform: uppercase;
+  }
+
+  #account-password-label {
+    position: absolute;
+    left: 270px;
+    text-align: center;
+    width: 200px;
+    top: 390px;
+    font-size: 14px;
+    z-index: 100;
+    color: white;
+    letter-spacing: 1.5px;
+    word-spacing: 1.5px;
+    font-weight: bolder;
+    font-variant: small-caps;
+    text-transform: uppercase;
+  }
+
 .horizontal-line{
     left: 0px;
     top: 120px;
@@ -336,8 +383,8 @@ header {
   }
 
 .version-holder {
-    left: 1150px;
-    top: 740px;
+    left: 1140px;
+    top: 730px;
     position: absolute;
     width: 300px;
     height: 8px;

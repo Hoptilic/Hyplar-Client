@@ -17,12 +17,21 @@ document.querySelector('.minimize-button').addEventListener('click', function() 
 document.querySelector('.settings-tab').addEventListener('click', function() {
   document.querySelector('.settings-page').style.visibility = 'visible';
   document.querySelector('.home-page').style.visibility = 'hidden';
+  document.querySelector('.account-page').style.visibility = 'hidden';
+});
+
+// ACCOUNT TAB //
+document.querySelector('.account-tab').addEventListener('click', function() {
+  document.querySelector('.account-page').style.visibility = 'visible';
+  document.querySelector('.home-page').style.visibility = 'hidden';
+  document.querySelector('.settings-page').style.visibility = 'hidden';
 });
 
 // HOME TAB //
 document.querySelector('.home-tab').addEventListener('click', function() {
   document.querySelector('.home-page').style.visibility = 'visible';
   document.querySelector('.settings-page').style.visibility = 'hidden';
+  document.querySelector('.account-page').style.visibility = 'hidden';
 });
 
 // STORE TAB //
