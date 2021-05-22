@@ -135,7 +135,7 @@ request.post({
 	document.querySelector('.blog-title').innerHTML = body.news_title;
 	document.querySelector('.blog-content').innerHTML = body.news_post.replace(/(?:\r\n|\r|\n)/g, '<br>');
 	document.querySelector('.blog-author').innerHTML = 'Posted by ' + body.news_author;
-	document.querySelector('.blog-author-skin').src = 'https://crafatar.com/avatars/' + body.latest_blog_post.author_uuid + '?size=32';
+	document.querySelector('.blog-author-skin').src = 'http://crafatar.com/renders/head/' + body.news_authoruuid + '?size=32&overlay';
 
 	if (body.banned) reason = body.ban_reason;
 
