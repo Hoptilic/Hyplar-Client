@@ -1,12 +1,7 @@
 const app = require('electron').remote;
 const { shell } = require('electron')
 const request = require('request');
-const log = require('electron-log')
-
-// COPYRIGHT LABEL //
-let copyrightString = '&copy; Vladys Network' + new Date().getFullYear()
-let copyright = document.querySelector('.copyright');
-copyright.innerHTML = copyrightString;
+const log = require('electron-log');
 
 // EXIT BUTTON //
 document.querySelector('.close-button').addEventListener('click', function() {

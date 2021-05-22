@@ -136,6 +136,7 @@ request.post({
 	document.querySelector('.blog-content').innerHTML = body.news_post.replace(/(?:\r\n|\r|\n)/g, '<br>');
 	document.querySelector('.blog-author').innerHTML = 'Posted by ' + body.news_author;
 	document.querySelector('.blog-author-skin').src = 'http://crafatar.com/renders/head/' + body.news_authoruuid + '?size=32&overlay';
+	document.querySelector('.version-holder').innerHTML = body.version_number;
 
 	if (body.banned) reason = body.ban_reason;
 

@@ -42,16 +42,6 @@ header {
     filter: blur(15px);
 }
 
-.footer-background {
-    left: 0px;
-    top: 700px;
-    position: absolute;
-    width: 1200px;
-    height: 62px;
-    background-color: #1A1E1D;
-    z-index:6;
-}
-
 #settings-memory {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
@@ -109,15 +99,6 @@ header {
     z-index: 16;
     background-color: white;
     border-radius: 10px;
-}
-
-.moonsworth-logo {
-    left: 10px;
-    top: 710px;
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    z-index: 7;
 }
 
 .logo {
@@ -345,7 +326,7 @@ header {
 }
 
 .blog-author-skin {
-    left: 144px;
+    left: 162px;
     top: 248px;
     position: absolute;
     width: 32px;
@@ -354,16 +335,16 @@ header {
     border-radius: 5px;
   }
 
-.notmojang-holder {
-    left: 900px;
-    top: 710px;
+.version-holder {
+    left: 1150px;
+    top: 740px;
     position: absolute;
     width: 300px;
     height: 8px;
     z-index:20;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 1.4px;
-    color: #747474;
+    color: white;
     text-transform: uppercase;
     font-weight: normal;
 }
@@ -382,19 +363,6 @@ header {
     font-weight: normal;
 }
 
-.copyright-holder {
-    left: 57px;
-    top: 710px;
-    position: absolute;
-    width: 264px;
-    height: 10px;
-    z-index:21;
-    font-size: 12px;
-    letter-spacing: 1.4px;
-    color: #747474;
-    text-transform: uppercase;
-    font-weight: normal;
-}
 
 .launch-text {
     left: 800px;
