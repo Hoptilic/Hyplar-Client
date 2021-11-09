@@ -1,5 +1,1 @@
-# Hyplar Client
-
-This is how i learn to do backend and frontent
-
-# Send help
+# Released publicly as the project is dead
